@@ -1,0 +1,17 @@
+<%= form_with(model: @profile, local: true) do |form| %>
+  
+  <div class="profile_content">
+    <p><%= form.label :prefecture %></p>
+    <%= form.select :prefecture, Profile.prefectures.keys, {} %>
+
+    
+
+    <p><%= form.label :content %></p>
+    <%= form.text_area :content %>
+
+  </div>
+
+  <br>
+
+  <%= form.submit  "作成する" %>
+<% end %>
